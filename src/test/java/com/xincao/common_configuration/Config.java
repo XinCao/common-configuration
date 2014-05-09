@@ -1,5 +1,6 @@
 package com.xincao.common_configuration;
 
+import com.xincao.common_util.tool.PropertiesReader;
 import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -69,7 +70,7 @@ class Config {
     public void load() {
         try {
             Util.printSection("Config");
-            Properties[] props = PropertiesUtils.loadAllFromDirectory(config);
+            Properties[] props = PropertiesReader.loadAllFromDirectory(config);
             ConfigurableProcessor.process(Config.class, props);
             log.info("Loading: " + config + "****");
         } catch (Exception e) {

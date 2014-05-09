@@ -17,6 +17,7 @@ import com.xincao.common_configuration.transformers.LongTransformer;
 import com.xincao.common_configuration.transformers.PatternTransformer;
 import com.xincao.common_configuration.transformers.ShortTransformer;
 import com.xincao.common_configuration.transformers.StringTransformer;
+import com.xincao.common_util.tool.ClassRelationshipAnalysis;
 
 /**
  * This class is responsible for creating property transformers. Each time it
@@ -83,7 +84,7 @@ public class PropertyTransformerFactory {
                 // return new ArrayTransformer();
             } else if (clazzToTransform == File.class) {
                 return FileTransformer.SHARED_INSTANCE;
-            } else if (ClassUtils.isSubclass(clazzToTransform, InetSocketAddress.class)) {
+            } else if (ClassRelationshipAnalysis.isSubclass(clazzToTransform, InetSocketAddress.class)) {
                 return InetSocketAddressTransformer.SHARED_INSTANCE;
             } else if (clazzToTransform == Pattern.class) {
                 return PatternTransformer.SHARED_INSTANCE;
