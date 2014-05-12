@@ -1,4 +1,4 @@
-package com.xincao.common_configuration;
+package com.xincao.common.configuration;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

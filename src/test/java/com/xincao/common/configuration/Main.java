@@ -1,4 +1,4 @@
-package com.xincao.common_configuration;
+package com.xincao.common.configuration;
 
 /**
  *

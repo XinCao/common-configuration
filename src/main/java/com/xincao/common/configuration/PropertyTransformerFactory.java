@@ -1,23 +1,23 @@
-package com.xincao.common_configuration;
+package com.xincao.common.configuration;
 
 import java.io.File;
 import java.net.InetSocketAddress;
 import java.util.regex.Pattern;
-import com.xincao.common_configuration.transformers.BooleanTransformer;
-import com.xincao.common_configuration.transformers.ByteTransformer;
-import com.xincao.common_configuration.transformers.CharTransformer;
-import com.xincao.common_configuration.transformers.ClassTransformer;
-import com.xincao.common_configuration.transformers.DoubleTransformer;
-import com.xincao.common_configuration.transformers.EnumTransformer;
-import com.xincao.common_configuration.transformers.FileTransformer;
-import com.xincao.common_configuration.transformers.FloatTransformer;
-import com.xincao.common_configuration.transformers.InetSocketAddressTransformer;
-import com.xincao.common_configuration.transformers.IntegerTransformer;
-import com.xincao.common_configuration.transformers.LongTransformer;
-import com.xincao.common_configuration.transformers.PatternTransformer;
-import com.xincao.common_configuration.transformers.ShortTransformer;
-import com.xincao.common_configuration.transformers.StringTransformer;
-import com.xincao.common_util.tool.ClassRelationshipAnalysis;
+import com.xincao.common.configuration.transformers.BooleanTransformer;
+import com.xincao.common.configuration.transformers.ByteTransformer;
+import com.xincao.common.configuration.transformers.CharTransformer;
+import com.xincao.common.configuration.transformers.ClassTransformer;
+import com.xincao.common.configuration.transformers.DoubleTransformer;
+import com.xincao.common.configuration.transformers.EnumTransformer;
+import com.xincao.common.configuration.transformers.FileTransformer;
+import com.xincao.common.configuration.transformers.FloatTransformer;
+import com.xincao.common.configuration.transformers.InetSocketAddressTransformer;
+import com.xincao.common.configuration.transformers.IntegerTransformer;
+import com.xincao.common.configuration.transformers.LongTransformer;
+import com.xincao.common.configuration.transformers.PatternTransformer;
+import com.xincao.common.configuration.transformers.ShortTransformer;
+import com.xincao.common.configuration.transformers.StringTransformer;
+import com.xincao.common.util.tool.ClassRelationshipAnalysis;
 
 /**
  * This class is responsible for creating property transformers. Each time it

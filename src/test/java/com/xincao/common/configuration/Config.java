@@ -1,6 +1,6 @@
-package com.xincao.common_configuration;
+package com.xincao.common.configuration;
 
-import com.xincao.common_util.tool.PropertiesReader;
+import com.xincao.common.util.tool.PropertiesReader;
 import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

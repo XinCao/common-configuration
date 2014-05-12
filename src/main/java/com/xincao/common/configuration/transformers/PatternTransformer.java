@@ -1,9 +1,9 @@
-package com.xincao.common_configuration.transformers;
+package com.xincao.common.configuration.transformers;
 
 import java.lang.reflect.Field;
 import java.util.regex.Pattern;
-import com.xincao.common_configuration.PropertyTransformer;
-import com.xincao.common_configuration.TransformationException;
+import com.xincao.common.configuration.PropertyTransformer;
+import com.xincao.common.configuration.TransformationException;
 
 /**
  * Authomatic pattern transformer for RegExp resolving
