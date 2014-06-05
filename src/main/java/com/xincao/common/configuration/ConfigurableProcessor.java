@@ -60,7 +60,6 @@ public class ConfigurableProcessor {
                 process(itf, obj, props);
             }
         }
-
         Class superClass = clazz.getSuperclass();
         if (superClass != null && superClass != Object.class) {
             process(superClass, obj, props);
@@ -93,8 +92,7 @@ public class ConfigurableProcessor {
             if (f.isAnnotationPresent(Property.class)) {
                 // Final fields should not be processed
                 if (Modifier.isFinal(f.getModifiers())) {
-                    RuntimeException re = new RuntimeException("Attempt to proceed final field " + f.getName()
-                            + " of class " + clazz.getName());
+                    RuntimeException re = new RuntimeException("Attempt to proceed final field " + f.getName() + " of class " + clazz.getName());
                     logger.error(re.getMessage());
                     throw re;
                 } else {
@@ -129,8 +127,7 @@ public class ConfigurableProcessor {
                 logger.debug("Field " + f.getName() + " of class " + f.getDeclaringClass().getName() + " wasn't modified");
             }
         } catch (Exception e) {
-            RuntimeException re = new RuntimeException("Can't transform field " + f.getName() + " of class "
-                    + f.getDeclaringClass(), e);
+            RuntimeException re = new RuntimeException("Can't transform field " + f.getName() + " of class " + f.getDeclaringClass(), e);
             logger.error(re.getMessage());
             throw re;
         }
@@ -158,22 +155,17 @@ public class ConfigurableProcessor {
         String value = null;
 
         if (key.isEmpty()) {
-            logger.warn("Property " + field.getName() + " of class " + field.getDeclaringClass().getName()
-                    + " has empty key");
+            logger.warn("Property " + field.getName() + " of class " + field.getDeclaringClass().getName() + " has empty key");
         } else {
             value = findPropertyByKey(key, props);
         }
-
         if (value == null) {
             value = defaultValue;
             if (logger.isDebugEnabled()) {
-                logger.debug("Using default value for field " + field.getName() + " of class "
-                        + field.getDeclaringClass().getName());
+                logger.debug("Using default value for field " + field.getName() + " of class " + field.getDeclaringClass().getName());
             }
         }
-
-        PropertyTransformer pt = PropertyTransformerFactory.newTransformer(field.getType(), property
-                .propertyTransformer());
+        PropertyTransformer pt = PropertyTransformerFactory.newTransformer(field.getType(), property.propertyTransformer());
         return pt.transform(value, field);
     }
 
@@ -190,7 +182,6 @@ public class ConfigurableProcessor {
                 return p.getProperty(key);
             }
         }
-
         return null;
     }
 

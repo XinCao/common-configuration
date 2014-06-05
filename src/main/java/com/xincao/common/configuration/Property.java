@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 
 /**
  * This annotation is used to mark field that should be processed by
- * {@link com.aionemu.commons.configuration.ConfigurableProcessor}<br>
+ * {@link com.xincao.common.configuration.ConfigurableProcessor}<br>
  * <br>
  *
  * This annotation is Documented, all definitions with it will appear in javadoc

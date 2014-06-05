@@ -1,23 +1,10 @@
 package com.xincao.common.configuration;
 
-import com.xincao.common.util.tool.PropertiesReader;
-import java.util.Properties;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
- * 
+ *
  * @author caoxin
  */
 class Config {
-
-    protected static final Logger log = LoggerFactory.getLogger(Config.class);
-
-    public Config() {}
-
-    public Config(String network) {
-        this.config = network;
-    }
 
     @Property(key = "loginserver.network.client.port", defaultValue = "2106")
     public static int LOGIN_PORT;
@@ -62,20 +49,4 @@ class Config {
     @Property(key = "loginserver.accounts.autocreate", defaultValue = "true")
     public static boolean ACCOUNT_AUTO_CREATION;
 
-    private String config = "";
-
-    /**
-     * 加载配置文件（.properties）
-     */
-    public void load() {
-        try {
-            Util.printSection("Config");
-            Properties[] props = PropertiesReader.loadAllFromDirectory(config);
-            ConfigurableProcessor.process(Config.class, props);
-            log.info("Loading: " + config + "****");
-        } catch (Exception e) {
-            log.error("Can't load loginserver configuration", e);
-            throw new Error("Can't load loginserver configuration", e);
-        }
-    }
 }
